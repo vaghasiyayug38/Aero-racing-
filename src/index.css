@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-neon: #00F0FF;
+  --color-pink: #FF003C;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #05050A;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none; /* मोबाइल पर पुल-टू-रिफ्रेश बंद करने के लिए */
+}
+
+::-webkit-scrollbar { width: 0px; } /* मोबाइल पर स्क्रॉलबार छिपाएं */
+
+.glass {
+  background: rgba(15, 15, 25, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
